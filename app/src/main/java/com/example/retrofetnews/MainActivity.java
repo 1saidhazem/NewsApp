@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     private RVAdapter adapter;
     public static String baseURL = "https://newsapi.org/v2/";
-    private String categorySelected;
+    private String countrySelected , categorySelected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +35,23 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        binding.mainSpinnerCountry.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                countrySelected = adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
         binding.mainSpinnerCategory.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 categorySelected = adapterView.getItemAtPosition(i).toString();
-                sendRequestByRetrofit(categorySelected);
+                sendRequestByRetrofit(countrySelected ,categorySelected);
 
             }
             @Override
@@ -50,11 +62,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void sendRequestByRetrofit(String category) {
+    private void sendRequestByRetrofit(String country ,String category) {
         API_Interface apiInterface = RetrofitClient.getInstance().create(API_Interface.class);
 
         apiInterface.getNews(
-                "eg",
+                country,
                 category,
                 "247cfe1c34b040fa9b60b78b65ecd10c"
         ).enqueue(new Callback<News>() {

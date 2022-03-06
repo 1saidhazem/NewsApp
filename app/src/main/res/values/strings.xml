@@ -2,12 +2,20 @@
     <string name="app_name">Retrofit News</string>
 
     <string-array name="categories">
+        <item>اختر التصنيف</item>
         <item>business</item>
         <item>entertainment</item>
         <item>health</item>
         <item>science</item>
         <item>sports</item>
         <item>technology</item>
+    </string-array>
+
+
+    <string-array name="countries" >
+        <item>اختر الدولة</item>
+        <item>en</item>
+        <item>sa</item>
     </string-array>
 
 </resources>
