@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.retrofetnews">
+    package="com.news.newsApp">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,15 +10,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RetrofetNews">
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity
-            android:name=".WebViewActivity"
+            android:name=".Activities.WebViewActivity"
             android:exported="true" />
         <activity
-            android:name=".DetailsActivity"
+            android:name=".Activities.DetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

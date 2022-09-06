@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Retrofit News</string>
+    <string name="app_name">News App</string>
 
     <string-array name="categories">
         <item>اختر التصنيف</item>

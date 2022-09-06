@@ -1,4 +1,4 @@
-package com.example.retrofetnews;
+package com.news.newsApp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebViewClient;
 
-import com.example.retrofetnews.databinding.ActivityWebViewBinding;
+import com.news.newsApp.databinding.ActivityWebViewBinding;
 
 public class WebViewActivity extends AppCompatActivity {
 
@@ -20,7 +20,7 @@ public class WebViewActivity extends AppCompatActivity {
         binding = ActivityWebViewBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
 
         url = getIntent().getStringExtra("url");
 

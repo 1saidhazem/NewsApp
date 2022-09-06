@@ -1,4 +1,4 @@
-package com.example.retrofetnews;
+package com.news.newsApp;
 
 import org.junit.Test;
 

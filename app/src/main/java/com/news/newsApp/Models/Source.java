@@ -1,6 +1,8 @@
-package com.example.retrofetnews;
+package com.news.newsApp.Models;
 
-public class Source {
+import java.io.Serializable;
+
+public class Source implements Serializable {
     private String name;
 
     public Source(String name) {
